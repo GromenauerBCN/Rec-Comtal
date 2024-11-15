@@ -140,15 +140,6 @@ body {
   padding: 10px;
 }
 
-/* Añadir más espacio en el contenido para permitir scroll */
-main {
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
 /* Estilo para el contenido de index.html */
 section h2 {
   margin-top: 50px;
@@ -294,20 +285,20 @@ body {
   flex-wrap: wrap;
 }
 
-.botons .boton {
+.botons .boto {
   position: relative;
   width: 250px;
   margin: 15px;
   text-align: center;
 }
 
-.botons .boton img {
+.botons .boto img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.botons .boton .faldon {
+.botons .boto .faldon {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -327,12 +318,12 @@ body {
 
 /* Media Queries para pantallas pequeñas */
 @media screen and (max-width: 768px) {
-  .botons .boton {
+  .botons .boto {
     width: 100%; /* Hacer los botones de ancho completo en móviles */
     margin-bottom: 15px;
   }
 
-  .botons .boton .faldon {
+  .botons .boto .faldon {
     font-size: 1rem; /* Reducir tamaño de fuente en móviles */
   }
 
@@ -377,3 +368,5 @@ body {
     max-width: 100%;
   }
 }
+
+/* Estil per la fitxa de carrer */
