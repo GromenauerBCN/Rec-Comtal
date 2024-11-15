@@ -1,0 +1,22 @@
+{
+  "name": "rec-comtal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "browserslist": [
+  "> 0.25%",
+  "last 2 versions",
+  "not dead"
+  ],  
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Manel Carrere",
+  "license": "manelcarrere",
+  "description": "",
+  "dependencies": {
+    "parcel": "^2.13.0"
+  }
+}

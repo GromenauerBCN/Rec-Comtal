@@ -1,0 +1,92 @@
+body {
+  background-color: beige;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+#navbar {
+  z-index: 10;
+  box-sizing: border-box;
+  background-color: #333;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+#nav-logo {
+  width: 50px;
+}
+
+#nav-title {
+  color: #fff;
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#navbar ul {
+  gap: 15px;
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+}
+
+#navbar ul li a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  color: beige;
+}
+
+.hamburger-icon {
+  color: #fff;
+  cursor: pointer;
+  font-size: 30px;
+  display: none;
+}
+
+.menu {
+  gap: 15px;
+  display: flex;
+}
+
+#menu {
+  gap: 15px;
+  margin-left: auto;
+  padding-left: 20px;
+  display: flex;
+}
+
+@media (width <= 768px) {
+  #navbar ul {
+    background-color: #333;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  #navbar ul li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  #navbar ul.active {
+    display: flex;
+  }
+}
+/*# sourceMappingURL=index.1303bb05.css.map */
