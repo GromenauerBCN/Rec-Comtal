@@ -116,6 +116,120 @@ body {
   margin-left: 20px;
 }
 
+/* Menu superior */
+#barra_dalt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; 
+  color: white;
+  padding: 10px 20px;
+  z-index: 10;
+}
+
+#barra_dalt .logo_titol {
+  display: flex;
+  align-items: center;  
+  justify-content: flex-start;  
+  width: 100%; 
+}
+
+#barra_dalt #nav-logo {
+  max-width: 40px; 
+  margin-right: 10px; 
+}
+
+#barra_dalt #nav-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+#barra_dalt #nav-title a {
+  color: white;
+  text-decoration: none;
+}
+
+#barra_dalt ul {
+  list-style: none;
+  display: flex;
+  margin-left: auto; 
+}
+
+#barra_dalt ul li {
+  margin-left: 20px; 
+}
+
+#barra_dalt ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+#barra_dalt ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivitat menú */
+@media (max-width: 768px) {
+  #barra_dalt ul {
+    display: block;  
+    text-align: center;
+  }
+
+  #barra_dalt ul li {
+    margin: 10px 0;  
+  }
+
+  #barra_dalt ul li a {
+    font-size: 1.2rem; 
+  }
+  
+  
+  #barra_dalt .logo_titol {
+    justify-content: center; 
+  }
+
+  #barra_dalt #nav-title {
+    font-size: 1.3rem; 
+  }
+}
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  #barra_dalt ul {
+    display: flex; 
+    justify-content: center;
+  }
+
+  #barra_dalt ul li {
+    margin-left: 15px;  
+  }
+
+  #barra_dalt ul li a {
+    font-size: 1.1rem; 
+  }
+}
+
+
+@media (min-width: 1025px) {
+  #barra_dalt ul {
+    display: flex;  
+    justify-content: flex-end;
+  }
+
+  #barra_dalt ul li {
+    margin-left: 20px;  
+  }
+
+  #barra_dalt ul li a {
+    font-size: 1rem;
+  }
+}
+
+
 /* Estils index.html */
 .portada {
   position: relative;

@@ -8,40 +8,6 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-#barra_dalt .logo_titol {
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  display: flex;
-}
-
-#barra_dalt #nav-logo {
-  max-width: 40px;
-  margin-right: 10px;
-}
-
-#barra_dalt #nav-title a {
-  color: #fff;
-  text-decoration: none;
-}
-
-#barra_dalt ul {
-  margin-left: auto;
-  list-style: none;
-  display: flex;
-}
-
-#barra_dalt ul li {
-  margin-left: 20px;
-}
-
-#barra_dalt ul li a {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  text-decoration: none;
-}
-
 .text_presentacio {
   max-width: 800px;
   margin: 100px auto;
@@ -84,6 +50,93 @@ body {
 .fotos_presentacio-img.right {
   float: right;
   margin-left: 20px;
+}
+
+#barra_dalt .logo_titol {
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+#barra_dalt #nav-logo {
+  max-width: 40px;
+  margin-right: 10px;
+}
+
+#barra_dalt #nav-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#barra_dalt ul {
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+}
+
+#barra_dalt ul li {
+  margin-left: 20px;
+}
+
+#barra_dalt ul li a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@media (width <= 768px) {
+  #barra_dalt ul {
+    text-align: center;
+    display: block;
+  }
+
+  #barra_dalt ul li {
+    margin: 10px 0;
+  }
+
+  #barra_dalt ul li a {
+    font-size: 1.2rem;
+  }
+
+  #barra_dalt .logo_titol {
+    justify-content: center;
+  }
+
+  #barra_dalt #nav-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (width <= 1024px) and (width >= 769px) {
+  #barra_dalt ul {
+    justify-content: center;
+    display: flex;
+  }
+
+  #barra_dalt ul li {
+    margin-left: 15px;
+  }
+
+  #barra_dalt ul li a {
+    font-size: 1.1rem;
+  }
+}
+
+@media (width >= 1025px) {
+  #barra_dalt ul {
+    justify-content: flex-end;
+    display: flex;
+  }
+
+  #barra_dalt ul li {
+    margin-left: 20px;
+  }
+
+  #barra_dalt ul li a {
+    font-size: 1rem;
+  }
 }
 
 .portada {
