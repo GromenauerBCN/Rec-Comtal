@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "browserslist": [
-  "> 0.25%",
-  "last 2 versions",
-  "not dead"
-  ],  
+    "> 0.25%",
+    "last 2 versions",
+    "not dead"
+  ],
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html",
@@ -18,5 +18,8 @@
   "description": "",
   "dependencies": {
     "parcel": "^2.13.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20"
   }
 }
