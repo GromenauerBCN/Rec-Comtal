@@ -210,20 +210,20 @@ section p {
   box-sizing: border-box;
 }
 
-/* Configuración general del cuerpo de la página */
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #f5f5dc; /* Fondo de la página color crema */
+  background-color: #f5f5dc; 
 }
 
-/* Barra de navegación fija a la parte superior */
+/* Menu superior */
 #barra_dalt {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333; /* Barra de menú gris oscuro */
+  background-color: #333; 
   color: white;
   padding: 10px 20px;
   z-index: 10;
@@ -264,9 +264,50 @@ body {
   text-decoration: underline;
 }
 
-/* Contenido de la página */
+/* Responsivitat menu superior */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; 
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      z-index: 1;
+  }
+
+  .nav-links li {
+      margin: 15px 0;
+      text-align: center;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links a {
+      font-size: 20px;
+  }
+}
+
+/* Tablets i PCs petits */
+@media (min-width: 769px) {
+  .nav-links {
+      display: flex;
+  }
+
+  .menu-icon {
+      display: none;
+  }
+}
+
 .content {
-  margin-top: 100px; /* Espacio para la barra de navegación */
+  margin-top: 100px; 
   padding: 20px;
 }
 
@@ -282,7 +323,7 @@ body {
   margin-bottom: 40px;
 }
 
-/* Botones con imagen y faldón */
+/* Botons carrers */
 .botons {
   display: flex;
   justify-content: center;
@@ -298,7 +339,7 @@ body {
 
 .botons .boto img {
   width: 100%;
-  height: auto;
+  height: 250px;
   display: block;
 }
 
