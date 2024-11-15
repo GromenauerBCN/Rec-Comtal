@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f5f5dc; /* Fondo color crema */
+  background-color: #f5f5dc; 
 }
 
 /* Menu superior */
@@ -23,20 +23,22 @@ body {
 
 #barra_dalt .logo_titol {
   display: flex;
-  align-items: center;  /* Alinea verticalmente el logo y el título */
-  justify-content: flex-start;  /* Alinea todo el contenido a la izquierda */
-  width: 100%; /* Asegura que los elementos se estiren a toda la barra */
+  align-items: center;  
+  justify-content: flex-start;  
+  width: 100%; 
 }
 
 #barra_dalt #nav-logo {
-  max-width: 40px; /* Ajusta el tamaño del logo */
-  margin-right: 10px; /* Añade un pequeño espacio entre el logo y el título */
+  max-width: 40px; 
+  margin-right: 10px; 
 }
 
 #barra_dalt #nav-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
+  text-decoration: none;
+  color: inherit;
 }
 
 #barra_dalt #nav-title a {
