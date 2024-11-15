@@ -366,4 +366,9 @@ body {
     max-width: 100%;
   }
 }
+
+.enllaços_negres {
+  color: #000;
+  text-decoration: underline;
+}
 /*# sourceMappingURL=index.1303bb05.css.map */

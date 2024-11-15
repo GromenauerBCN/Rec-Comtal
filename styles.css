@@ -414,4 +414,9 @@ body {
   }
 }
 
+/* Enllaços negres */
 
+.enllaços_negres {
+  text-decoration: underline;
+  color: black; 
+}
