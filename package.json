@@ -1,7 +1,6 @@
 {
   "name": "rec-comtal",
   "version": "1.0.0",
-  "main": "index.js",
   "browserslist": [
     "> 0.5%",
     "last 2 versions",
