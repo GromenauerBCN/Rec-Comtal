@@ -67,47 +67,47 @@ body {
 
 
 /* Text de presentació.html */
-.content-column {
+.text_presentacio {
   max-width: 800px;
   margin: 100px auto;  
   padding: 20px;
 }
 
-.content-column h2 {
+.text_presentacio h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.content-column h3 {
+.text_presentacio h3 {
   margin-top: 30px;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-.content-column p {
+.text_presentacio p {
   line-height: 1.6;
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
 /* Imágenes flotantes en presentació.html */
-.floated-images {
+.fotos_presentacio {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.floated-img {
+.fotos_presentacio-img {
   width: 48%;
   border-radius: 8px;
 }
 
-.floated-img.left {
+.fotos_presentacio-img.left {
   float: left;
   margin-right: 20px;
 }
 
-.floated-img.right {
+.fotos_presentacio-img.right {
   float: right;
   margin-left: 20px;
 }
@@ -156,15 +156,15 @@ section p {
 /* Responsividad para móviles */
 @media (max-width: 768px) {
   /* Ajustes para la columna de texto de presentació.html */
-  .content-column {
+  .text_presentacio {
     width: 90%; /* Aumenta el ancho del contenedor */
   }
 
-  .floated-images {
+  .fotos_presentacio {
     flex-direction: column;
   }
 
-  .floated-img {
+  .fotos_presentacio-img {
     width: 100%;
     margin: 10px 0; /* Agrega margen entre las imágenes */
   }

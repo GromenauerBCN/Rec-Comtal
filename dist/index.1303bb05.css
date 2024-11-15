@@ -60,7 +60,7 @@ body {
   line-height: 1.6;
 }
 
-.floated-images {
+.fotos_presentacio {
   justify-content: space-between;
   margin-bottom: 20px;
   display: flex;
@@ -134,7 +134,7 @@ section p {
     width: 90%;
   }
 
-  .floated-images {
+  .fotos_presentacio {
     flex-direction: column;
   }
 
