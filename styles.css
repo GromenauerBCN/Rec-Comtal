@@ -71,7 +71,7 @@ body {
   text-decoration: underline;
 }
 
-/* Text de presentació.html */
+/* Estils presentació.html */
 .text_presentacio {
   max-width: 800px;
   margin: 100px auto;  
@@ -95,7 +95,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Imágenes flotantes en presentació.html */
 .fotos_presentacio {
   display: flex;
   justify-content: space-between;
@@ -117,7 +116,7 @@ body {
   margin-left: 20px;
 }
 
-/* Estilos de la página principal (index.html) */
+/* Estils index.html */
 .portada {
   position: relative;
   margin-left: auto;
@@ -129,12 +128,12 @@ body {
 .foto_portada-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* La imagen cubrirá toda la pantalla sin distorsionarse */
+  object-fit: cover; 
 }
 
 .titol_portada {
   position: absolute;
-  bottom: -180px; /* El título se coloca justo debajo de la imagen */
+  bottom: -180px; 
   left: 50%;
   transform: translateX(-50%);
   color: white;
@@ -145,7 +144,6 @@ body {
   padding: 10px;
 }
 
-/* Estilo para el contenido de index.html */
 section h2 {
   margin-top: 50px;
   font-size: 1.5rem;
@@ -158,11 +156,11 @@ section p {
   margin-top: 20px;
 }
 
-/* Responsividad para móviles */
+/* Elements responsius */
 @media (max-width: 768px) {
-  /* Ajustes para la columna de texto de presentació.html */
+ 
   .text_presentacio {
-    width: 90%; /* Aumenta el ancho del contenedor */
+    width: 90%; 
   }
 
   .fotos_presentacio {
@@ -171,11 +169,12 @@ section p {
 
   .fotos_presentacio-img {
     width: 100%;
-    margin: 10px 0; /* Agrega margen entre las imágenes */
+    margin: 10px 0; 
   }
 
   /* Ajustes para la imagen en index.html */
   .portada {
+    width: 480px;
     height: auto;
   }
 
