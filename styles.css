@@ -354,26 +354,26 @@ body {
   text-transform: uppercase;
 }
 
-/* Foto del mapa en la parte inferior */
+/* Mapa secció carrers */
 #mapa {
   width: 100%;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-/* Media Queries para pantallas pequeñas */
+/* Responsivitat botons */
 @media screen and (max-width: 768px) {
   .botons .boto {
-    width: 100%; /* Hacer los botones de ancho completo en móviles */
+    width: 100%; 
     margin-bottom: 15px;
   }
 
   .botons .boto .faldon {
-    font-size: 1rem; /* Reducir tamaño de fuente en móviles */
+    font-size: 1rem; 
   }
 
   #mapa {
-    width: 100%; /* Asegurarse que la imagen del mapa ocupe todo el ancho */
+    width: 100%; 
   }
 
   section p {
@@ -384,7 +384,7 @@ body {
 }
 
 
-/* Imagen final - Mapa */
+/* Mapa */
 .mapa {
   display: flex;
   justify-content: center;
@@ -393,11 +393,11 @@ body {
 
 .mapa-img {
   width: 100%;
-  max-width: 800px; /* Limitar el ancho máximo de la imagen */
+  max-width: 800px; 
   height: auto;
 }
 
-/* Estilos para la versión móvil */
+/* Responsiu mòbil */
 @media screen and (max-width: 768px) {
   .buttons-container {
     flex-direction: column;
@@ -415,5 +415,3 @@ body {
 }
 
 
-
-/* Estil per la fitxa de carrer */
