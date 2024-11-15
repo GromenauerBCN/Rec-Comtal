@@ -81,7 +81,7 @@ body {
   margin-left: 20px;
 }
 
-.hero-section {
+.portada {
   width: 1200px;
   margin-top: 150px;
   margin-left: auto;
@@ -89,14 +89,14 @@ body {
   position: relative;
 }
 
-.hero-image-img {
+.foto_portada-img {
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-.hero-title {
+.titol_portada {
   color: #fff;
   text-align: center;
   background-color: #00000080;
@@ -143,17 +143,17 @@ section p {
     margin: 10px 0;
   }
 
-  .hero-section {
+  .portada {
     height: auto;
   }
 
-  .hero-image-img {
+  .foto_portada-img {
     width: 480px;
     height: auto;
     margin-top: 135px;
   }
 
-  .hero-title {
+  .titol_portada {
     padding: 30px;
     font-size: 2rem;
     position: relative;

@@ -113,7 +113,7 @@ body {
 }
 
 /* Estilos de la página principal (index.html) */
-.hero-section {
+.portada {
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -121,13 +121,13 @@ body {
   width: 1200px; 
 }
 
-.hero-image-img {
+.foto_portada-img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* La imagen cubrirá toda la pantalla sin distorsionarse */
 }
 
-.hero-title {
+.titol_portada {
   position: absolute;
   bottom: -180px; /* El título se coloca justo debajo de la imagen */
   left: 50%;
@@ -179,17 +179,17 @@ section p {
   }
 
   /* Ajustes para la imagen en index.html */
-  .hero-section {
+  .portada {
     height: auto;
   }
 
-  .hero-image-img {
+  .foto_portada-img {
     width: 480px;
     height: auto;
     margin-top: 135px;
   }
 
-  .hero-title {
+  .titol_portada {
     font-size: 2rem;
     padding: 30px;
     position: relative;
