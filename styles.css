@@ -37,23 +37,22 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
-  text-decoration: none;
-  color: inherit;
+  
 }
 
 #barra_dalt #nav-title a {
-  color: white; /* Asegura que el enlace tenga el mismo color que el texto */
+  color: white;
   text-decoration: none;
 }
 
 #barra_dalt ul {
   list-style: none;
   display: flex;
-  margin-left: auto; /* Esto asegura que los botones estén alineados a la derecha */
+  margin-left: auto; 
 }
 
 #barra_dalt ul li {
-  margin-left: 20px; /* Espacio entre los botones del menú */
+  margin-left: 20px; 
 }
 
 #barra_dalt ul li a {
