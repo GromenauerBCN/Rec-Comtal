@@ -10,58 +10,58 @@ body {
 }
 
 /* Menu superior */
-#navbar {
+#barra_dalt {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333; /* Fondo gris oscuro de la barra de menú */
+  background-color: #333; 
   color: white;
   padding: 10px 20px;
   z-index: 10;
 }
 
-#navbar .nav-content {
+#barra_dalt .logo_titol {
   display: flex;
   align-items: center;  /* Alinea verticalmente el logo y el título */
   justify-content: flex-start;  /* Alinea todo el contenido a la izquierda */
   width: 100%; /* Asegura que los elementos se estiren a toda la barra */
 }
 
-#navbar #nav-logo {
+#barra_dalt #nav-logo {
   max-width: 40px; /* Ajusta el tamaño del logo */
   margin-right: 10px; /* Añade un pequeño espacio entre el logo y el título */
 }
 
-#navbar #nav-title {
+#barra_dalt #nav-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
 }
 
-#navbar #nav-title a {
+#barra_dalt #nav-title a {
   color: white; /* Asegura que el enlace tenga el mismo color que el texto */
   text-decoration: none;
 }
 
-#navbar ul {
+#barra_dalt ul {
   list-style: none;
   display: flex;
   margin-left: auto; /* Esto asegura que los botones estén alineados a la derecha */
 }
 
-#navbar ul li {
+#barra_dalt ul li {
   margin-left: 20px; /* Espacio entre los botones del menú */
 }
 
-#navbar ul li a {
+#barra_dalt ul li a {
   text-decoration: none;
   color: white;
   font-weight: 500;
   font-size: 1rem;
 }
 
-#navbar ul li a:hover {
+#barra_dalt ul li a:hover {
   text-decoration: underline;
 }
 
@@ -196,12 +196,12 @@ section p {
     top: 0px;
   }
 
-  #navbar ul {
+  #barra_dalt ul {
     display: block;
     text-align: center;
   }
 
-  #navbar ul li {
+  #barra_dalt ul li {
     margin: 15px 0;
   }
 }
@@ -223,7 +223,7 @@ body {
 }
 
 /* Barra de navegación fija a la parte superior */
-#navbar {
+#barra_dalt {
   position: fixed;
   top: 0;
   left: 0;
@@ -234,38 +234,38 @@ body {
   z-index: 10;
 }
 
-#navbar .nav-content {
+#barra_dalt .logo_titol {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#navbar #nav-logo {
+#barra_dalt #nav-logo {
   max-width: 40px;
 }
 
-#navbar #nav-title {
+#barra_dalt #nav-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
 }
 
-#navbar ul {
+#barra_dalt ul {
   list-style: none;
   display: flex;
 }
 
-#navbar ul li {
+#barra_dalt ul li {
   margin: 0 15px;
 }
 
-#navbar ul li a {
+#barra_dalt ul li a {
   text-decoration: none;
   color: white;
   font-weight: 500;
 }
 
-#navbar ul li a:hover {
+#barra_dalt ul li a:hover {
   text-decoration: underline;
 }
 
