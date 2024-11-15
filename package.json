@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "browserslist": [
-    "> 0.25%",
+    "> 0.5%",
     "last 2 versions",
     "not dead"
   ],
@@ -17,7 +17,8 @@
   "license": "manelcarrere",
   "description": "",
   "dependencies": {
-    "parcel": "^2.13.0"
+    "parcel": "^2.13.0",
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20"
