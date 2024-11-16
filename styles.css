@@ -47,7 +47,6 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
-  
 }
 
 #barra_dalt #nav-title a {
@@ -95,7 +94,7 @@ body {
 }
 
 .text_presentacio p {
-  line-height: 1,6;
+  line-height: 1.6;
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
@@ -121,62 +120,6 @@ body {
   margin-left: 20px;
 }
 
-/* Menu superior */
-#barra_dalt {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333; 
-  color: white;
-  padding: 10px 20px;
-  z-index: 10;
-}
-
-#barra_dalt .logo_titol {
-  display: flex;
-  align-items: center;  
-  justify-content: flex-start;  
-  width: 100%; 
-}
-
-#barra_dalt #nav-logo {
-  max-width: 40px; 
-  margin-right: 10px; 
-}
-
-#barra_dalt #nav-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-}
-
-#barra_dalt #nav-title a {
-  color: white;
-  text-decoration: none;
-}
-
-#barra_dalt ul {
-  list-style: none;
-  display: flex;
-  margin-left: auto; 
-}
-
-#barra_dalt ul li {
-  margin-left: 20px; 
-}
-
-#barra_dalt ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-#barra_dalt ul li a:hover {
-  text-decoration: underline;
-}
-
 /* Responsivitat menú */
 @media (max-width: 768px) {
   #barra_dalt ul {
@@ -192,7 +135,6 @@ body {
     font-size: 1.2rem; 
   }
   
-  
   #barra_dalt .logo_titol {
     justify-content: center; 
   }
@@ -201,7 +143,6 @@ body {
     font-size: 1.3rem; 
   }
 }
-
 
 @media (max-width: 1024px) and (min-width: 769px) {
   #barra_dalt ul {
@@ -218,7 +159,6 @@ body {
   }
 }
 
-
 @media (min-width: 1025px) {
   #barra_dalt ul {
     display: flex;  
@@ -233,7 +173,6 @@ body {
     font-size: 1rem;
   }
 }
-
 
 /* Estils index.html */
 .portada {
@@ -259,7 +198,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para mejorar la legibilidad */
+  background-color: rgba(0, 0, 0, 0.5); 
   padding: 10px;
 }
 
@@ -277,7 +216,6 @@ section p {
 
 /* Elements responsius */
 @media (max-width: 768px) {
- 
   .text_presentacio {
     width: 90%; 
   }
@@ -291,7 +229,6 @@ section p {
     margin: 10px 0; 
   }
 
-  /* Ajustes para la imagen en index.html */
   .portada {
     width: 480px;
     height: auto;
@@ -318,126 +255,6 @@ section p {
   #barra_dalt ul li {
     margin: 15px 0;
   }
-}
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  background-color: #f5f5dc; 
-}
-
-/* Menu superior */
-#barra_dalt {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333; 
-  color: white;
-  padding: 10px 20px;
-  z-index: 10;
-}
-
-#barra_dalt .logo_titol {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#barra_dalt #nav-logo {
-  max-width: 40px;
-}
-
-#barra_dalt #nav-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-}
-
-#barra_dalt ul {
-  list-style: none;
-  display: flex;
-}
-
-#barra_dalt ul li {
-  margin: 0 15px;
-}
-
-#barra_dalt ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-}
-
-#barra_dalt ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Responsivitat menu superior */
-@media (max-width: 768px) {
-  .nav-links {
-      display: none; 
-      flex-direction: column;
-      width: 100%;
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      z-index: 1;
-  }
-
-  .nav-links li {
-      margin: 15px 0;
-      text-align: center;
-  }
-
-  .menu-icon {
-      display: block;
-  }
-
-  .nav-links.active {
-      display: flex;
-  }
-
-  .nav-links a {
-      font-size: 20px;
-  }
-}
-
-/* Tablets i PCs petits */
-@media (min-width: 769px) {
-  .nav-links {
-      display: flex;
-  }
-
-  .menu-icon {
-      display: none;
-  }
-}
-
-.content {
-  margin-top: 100px; 
-  padding: 20px;
-}
-
-.content h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.content p {
-  font-size: 1rem;
-  margin-bottom: 40px;
 }
 
 /* Botons carrers */
@@ -500,7 +317,6 @@ body {
   }
 }
 
-
 /* Mapa */
 .mapa {
   display: flex;
@@ -532,17 +348,15 @@ body {
 }
 
 /* Enllaços */
-
-
-  #enllaços_negres {
-    margin-left: 20px;  /* Margen izquierdo */
-    margin-right: 20px; /* Margen derecho */
+#enllaços_negres {
+  margin-left: 20px;  /* Margen izquierdo */
+  margin-right: 20px; /* Margen derecho */
 }
 
 /* Text fitxa */
 .text_fitxa p {
-  line-height: 1,6;
+  line-height: 1.6;
   font-size: 1.1rem;
   margin-bottom: 10px;
-  margin-up:-10px;
+  margin-up: -10px;
 }
