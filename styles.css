@@ -9,6 +9,11 @@ a {
   text-decoration: none;
 }
 
+b {
+  color: rgb(0, 0, 0); 
+  text-decoration: underline;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f5f5dc; 
@@ -90,7 +95,7 @@ body {
 }
 
 .text_presentacio p {
-  line-height: 1.6;
+  line-height: 1,6;
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
@@ -315,9 +320,7 @@ section p {
   }
 }
 
-/* Estils recorrent.html */
 
-/* Reseteo de márgenes y padding por defecto */
 * {
   margin: 0;
   padding: 0;
@@ -528,9 +531,18 @@ body {
   }
 }
 
-/* Enllaços negres */
+/* Enllaços */
 
-.enllaços_negres {
-  text-decoration: underline;
-  color: black; 
+
+  #enllaços_negres {
+    margin-left: 20px;  /* Margen izquierdo */
+    margin-right: 20px; /* Margen derecho */
+}
+
+/* Text fitxa */
+.text_fitxa p {
+  line-height: 1,6;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  margin-up:-10px;
 }

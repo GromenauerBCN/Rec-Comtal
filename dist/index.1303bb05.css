@@ -3,6 +3,11 @@ a {
   text-decoration: none;
 }
 
+b {
+  color: #000;
+  text-decoration: underline;
+}
+
 body {
   background-color: beige;
   font-family: Roboto, sans-serif;
@@ -26,9 +31,9 @@ body {
 }
 
 .text_presentacio p {
+  line-height: 1, 6;
   margin-bottom: 20px;
   font-size: 1.1rem;
-  line-height: 1.6;
 }
 
 .fotos_presentacio {
@@ -420,8 +425,15 @@ body {
   }
 }
 
-.enllaços_negres {
-  color: #000;
-  text-decoration: underline;
+#enllaços_negres {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.text_fitxa p {
+  line-height: 1, 6;
+  margin-up: -10px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
 }
 /*# sourceMappingURL=index.1303bb05.css.map */
