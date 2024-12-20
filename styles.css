@@ -16,7 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Header */
 header {
   background-color: #000;
   color: #fff;
@@ -46,7 +45,6 @@ h1 {
   font-size: 1.5rem;
 }
 
-/* Botones */
 .botons {
   display: flex;
   flex-wrap: wrap;
@@ -95,7 +93,6 @@ h1 {
   z-index: 1;
 }
 
-/* Estilo responsive */
 @media (max-width: 768px) {
   .boto {
     width: 100px;
@@ -111,14 +108,13 @@ h1 {
   }
 }
 
-/* Slider */
 .slider {
   position: relative;
   z-index: 1;
   top: 20px;
   margin-top: 90px;
   margin-bottom: 0px;
-  height: calc(100vh - 241px); /* Ajuste para no cubrir el header */
+  height: calc(100vh - 241px); 
   width: 100%;
 }
 
@@ -143,7 +139,6 @@ h1 {
   position: relative;
 }
 
-/* Botons d'esquerra i dreta */
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
@@ -166,7 +161,6 @@ h1 {
   left: 10px;
 }
 
-/* Efecte de fade-in */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -176,7 +170,6 @@ h1 {
   }
 }
 
-/* Texto dentro del slider (títol sobre les fotos) */
 .slider-text {
   position: absolute;
   top: 50%;
@@ -185,21 +178,19 @@ h1 {
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
-  z-index: 20; /* Asegura que el texto esté por encima de las imágenes y botones */
+  z-index: 20; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
-/* Contenido principal */
 main {
   margin-top: 220px;
-  padding-top: 250px; /* Espacio debajo del header */
+  padding-top: 250px; 
   padding-bottom: 50px;
   flex-grow: 1;
   width: 100%;
 }
 
-/* Sección de presentación */
 .text_presentacio {
   display: flex;
   justify-content: center;
@@ -268,7 +259,6 @@ margin: 0 auto;
   margin-bottom: 20px;
 }
 
-/* Footer */
 footer {
   background-color: #000;
   color: #fff;
@@ -277,7 +267,7 @@ footer {
   z-index: 10;
   width: 100%;
   margin-top: 203px;
-  position: relative;
+  position: absolute;
 }
 
 .footer-menu ul {
@@ -313,18 +303,18 @@ footer p {
   margin: 10px 0;
 }
 
-/* Adaptación para móviles (pantallas más pequeñas) */
+/* Responsivitat */
 @media (max-width: 768px) {
-  /* Header */
+
   header {
     padding: 15px;
     height: auto;
   }
 
   .header-content {
-    justify-content: center;  /* Alinea el contenido al principio (izquierda) */
-    gap: 10px;  /* Reduce el espacio entre el logo y el texto en móviles */
-    padding-left: 0px;  /* Añade algo de espacio a la izquierda */
+    justify-content: center;  
+    gap: 10px;
+    padding-left: 0px;
   }
 
   .logo {
@@ -335,10 +325,9 @@ footer p {
     font-size: 40px;
   }
 
-  /* Ajustes del slider en móviles */
-  .slider {
-    height: 61vh; /* Reducción de la altura del slider */
-    margin-top: 10px; /* Ajuste para el espacio debajo del header */
+    .slider {
+    height: 61vh;
+    margin-top: 10px;
   }
 
   .swiper-slide {
@@ -346,18 +335,18 @@ footer p {
   }
 
   .slider-text {
-    font-size: 1.5rem; /* Ajuste en el tamaño de la fuente */
+    font-size: 1.5rem;
     z-index: 15;
-    margin-top: -200px; /* Ajuste para el espacio debajo del header */
+    margin-top: -200px;
   }
 
   .swiper-button-next, .swiper-button-prev {
-    z-index: 1; /* Botones visibles */
+    z-index: 1;
     color: white;
-    margin-top: -200px; /* Ajuste para el espacio debajo del header */
+    margin-top: -200px;
   }
 
-  /* Footer */
+  
   .footer-menu ul {
     flex-direction: column;
     align-items: center;
@@ -371,7 +360,6 @@ footer p {
     padding: 12px 20px;
   }
 
-  /* Sección de presentación */
   .text_presentacio {
     padding: 15px;
   }
