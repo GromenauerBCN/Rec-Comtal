@@ -1,38 +1,179 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="El Rec Comtal, la infraestructura hidràulica més antiga de Barcelona">
   <title>El Rec Comtal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css"> 
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <!-- Menú superior persistent -->
-  <nav id="barra_dalt">
-    <div class="logo_titol">
-      <img src="/logos/logo.png" alt="Logotip. Tres línies corbes blanques que simulen la forma de l'aigua." id="logo_menu">
-      <h1 id="titol_barra"><a href="index.html">El Rec Comtal</a></h1>
-      <ul>
-        <li><a href="/src/presentacio.html">Presentació</a></li>
-        <li><a href="/src/carrers.html">Carrers del Rec</a></li>
-        <li><a href="/src/enllacos.html">Enllaços</a></li>
-      </ul>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <img src="img/logo.png" alt="Logotip del Rec Comtal" class="logo">
+      <h1>El Rec Comtal</h1>
     </div>
-  </nav>
+  </header>
 
- 
-  <section class="portada">
-    <div class="foto_portada">
-      <!-- Imagen que ocupa toda la pantalla en horizontal -->
-      <img src="/pic_gran/front.jpg" alt="Imatge del Rec Comtal al seu pas per la finca La Ponderosa, a Vallbona" class="foto_portada-img">
+  <section class="slider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+  
+        <!-- Imagen 1 -->
+        <div class="swiper-slide">
+          <picture>
+            <img class="slider-img" 
+                 src="img/front.jpg" 
+                 srcset="img/front-small.jpg?as=WebP 480w, img/front.jpg?as=WebP 1920w" 
+                 sizes="(max-width: 768px) 80vw, 1920px" 
+                 alt="El Rec Comtal al pas per Can Oller." 
+                 title="El Rec Comtal al pas per Can Oller.">
+          </picture>
+        </div>
+  
+        <!-- Imagen 2 -->
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="img/front1-small.jpg?as=webp 480w, img/front1.jpg?as=webp 1920w" type="image/webp">
+            <img class="slider-img" src="img/front1.jpg" 
+                 srcset="img/front1-small.jpg 480w, img/front1.jpg 1920w" 
+                 sizes="(max-width: 768px) 480px, 1000px" 
+                 alt="Antiga infraestructura deteriorada dins del rec." 
+                 title="Antiga infraestructura deteriorada dins del rec." 
+                 loading="lazy">
+          </picture>
+        </div>
+  
+        <!-- Imagen 3 -->
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="img/front2-small.jpg?as=webp 480w, img/front2.jpg?as=webp 1920w" type="image/webp">
+            <img class="slider-img" src="img/front2.jpg" 
+                 srcset="img/front2-small.jpg 480w, img/front2.jpg 1920w" 
+                 sizes="(max-width: 768px) 480px, 1000px" 
+                 alt="Barraca situada al marge del rec al seu pas pel barri de Vallbona." 
+                 title="Barraca situada al marge del rec al seu pas pel barri de Vallbona." 
+                 loading="lazy">
+          </picture>
+        </div>
+  
+        <!-- Imagen 4 -->
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="img/front3-small.jpg?as=webp 480w, img/front3.jpg?as=webp 1920w" type="image/webp">
+            <img class="slider-img" src="img/front3.jpg" 
+                 srcset="img/front3-small.jpg 480w, img/front3.jpg 1920w" 
+                 sizes="(max-width: 768px) 480px, 1000px" 
+                 alt="Dona rentant al rec a prop d'una canonada de desguàs." 
+                 title="Dona rentant al rec a prop d'una canonada de desguàs." 
+                 loading="lazy">
+          </picture>
+        </div>
+  
+        <!-- Imagen 5 -->
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="img/front4-small.jpg?as=webp 480w, img/front4.jpg?as=webp 1920w" type="image/webp">
+            <img class="slider-img" src="img/front4.jpg" 
+                 srcset="img/front4-small.jpg 480w, img/front4.jpg 1920w" 
+                 sizes="(max-width: 768px) 480px, 1000px" 
+                 alt="El Rec Comtal al pas pel carrer Cinca." 
+                 title="El Rec Comtal al pas pel carrer Cinca." 
+                 loading="lazy">
+          </picture>
+        </div>
+  
+        <!-- Imagen 6 -->
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="img/front5-small.jpg?as=webp 480w, img/front5.jpg?as=webp 1920w" type="image/webp">
+            <img class="slider-img" src="img/front5.jpg" 
+                 srcset="img/front5-small.jpg 480w, img/front5.jpg 1920w" 
+                 sizes="(max-width: 768px) 480px, 1000px" 
+                 alt="Inauguració de les obres de desviament del Rec Comtal." 
+                 title="Inauguració de les obres de desviament del Rec Comtal." 
+                 loading="lazy">
+          </picture>
+        </div>
+  
+        <!-- Imagen 7 -->
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="img/front6-small.jpg?as=webp 480w, img/front6.jpg?as=webp 1920w" type="image/webp">
+            <img class="slider-img" src="img/front6.jpg" 
+                 srcset="img/front6-small.jpg 480w, img/front6.jpg 1920w" 
+                 sizes="(max-width: 768px) 480px, 1000px" 
+                 alt="Molí de Sant Andreu reflectit davant del Rec Comtal." 
+                 title="Molí de Sant Andreu reflectit davant del Rec Comtal." 
+                 loading="lazy">
+          </picture>
+        </div>
+  
+        <!-- Imagen 8 -->
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="img/front7-small.jpg?as=webp 480w, img/front7.jpg?as=webp 1920w" type="image/webp">
+            <img class="slider-img" src="img/front7.jpg" 
+                 srcset="img/front7-small.jpg 480w, img/front7.jpg 1920w" 
+                 sizes="(max-width: 768px) 480px, 1000px" 
+                 alt="Vegetació de ribera als marges del rec." 
+                 title="Vegetació de ribera als marges del rec." 
+                 loading="lazy">
+          </picture>
+        </div>
+  
+        <!-- Imagen 9 -->
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="img/front8-small.jpg?as=webp 480w, img/front8.jpg?as=webp 1920w" type="image/webp">
+            <img class="slider-img" src="img/front8.jpg" 
+                 srcset="img/front8-small.jpg 480w, img/front8.jpg 1920w" 
+                 sizes="(max-width: 768px) 480px, 1000px" 
+                 alt="Rec Comtal al seu pas per Vallbona." 
+                 title="Rec Comtal al seu pas per Vallbona." 
+                 loading="lazy">
+          </picture>
+        </div>
+  
+      </div>
     </div>
-    <h2 class="titol_portada">
-      <a href="/src/presentacio.html" class="boto_portada">La gran infraestructura hidràulica de la història de Barcelona</a>
-    </h2>
   </section>
 
- 
+  <!-- Text dins del slider -->
+  <h2 class="slider-text">La gran infraestructura hidràulica de Barcelona</h2>
+
+  <!-- Botons de navegació -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+
+  <!-- Peu de pàgina -->
+  <footer>
+    <div id="menu_navegacio_footer" class="footer-menu">
+      <ul>
+        <li><a href="src/presentacio.html"><img src="img/ico2.png" alt="Logo informació"> Presentació</a></li>
+        <li><a href="src/carrers.html"><img src="img/ico3.png" alt="Logo carrers"> Carrers</a></li>
+        <li><a href="src/enllacos.html"><img src="img/ico4.png" alt="Logo enllaços"> Enllaços i fonts d'informació</a></li>
+      </ul>
+    </div>
+    <div>
+      <p>&copy; 2024. Tots els drets reservats.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts necessaris -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+
 </body>
+
 </html>
