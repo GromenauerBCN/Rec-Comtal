@@ -262,14 +262,12 @@ margin: 0 auto;
 footer {
   background-color: #000;
   color: #fff;
-  bottom: 0;
-  left: 0; 
   padding: 20px;
   text-align: center;
   z-index: 10;
   width: 100%;
-  margin-top: 1203px;
-  position: absolute;
+  margin-top: 20 ;
+  position: relative;
 }
 
 .footer-menu ul {
