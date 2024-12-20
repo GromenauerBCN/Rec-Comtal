@@ -1,362 +1,394 @@
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-a {
-  color: rgb(255, 255, 255); 
-  text-decoration: none;
-}
-
-b {
-  color: rgb(0, 0, 0); 
-  text-decoration: underline;
-}
-
 body {
+  margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f5f5dc; 
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Menu superior */
-#barra_dalt {
+/* Header */
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  z-index: 1000; /* Asegura que el header esté encima de otros elementos */
+  height: 90px;
   width: 100%;
-  background-color: #333; 
-  color: white;
-  padding: 10px 20px;
-  z-index: 10;
 }
 
-#barra_dalt .logo_titol {
+.header-content {
   display: flex;
-  align-items: center;  
-  justify-content: flex-start;  
-  width: 100%; 
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-#barra_dalt #nav-logo {
-  max-width: 40px; 
-  margin-right: 10px; 
+.logo {
+  width: 40px;
+  height: 40px;
 }
 
-#barra_dalt #nav-title {
+h1 {
   font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
 }
 
-#barra_dalt #nav-title a {
-  color: white;
-  text-decoration: none;
-}
-
-#barra_dalt ul {
-  list-style: none;
+/* Botones */
+.botons {
   display: flex;
-  margin-left: auto; 
-}
-
-#barra_dalt ul li {
-  margin-left: 20px; 
-}
-
-#barra_dalt ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-#barra_dalt ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Estils presentació.html */
-.text_presentacio {
-  max-width: 800px;
-  margin: 100px auto;  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   padding: 20px;
 }
 
-.text_presentacio h2 {
+.boto {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.boto a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.boto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+  transition: transform 0.3s ease;
+}
+
+.boto:hover img {
+  transform: scale(1.1);
+}
+
+.boto-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Estilo responsive */
+@media (max-width: 768px) {
+  .boto {
+    width: 100px;
+    height: 100px;
+  }
+
+  .boto img {
+    clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+  }
+
+  .boto-text {
+    font-size: 12px;
+  }
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  z-index: 1;
+  top: 20px;
+  margin-top: 90px;
+  margin-bottom: 0px;
+  height: calc(100vh - 241px); /* Ajuste para no cubrir el header */
+  width: 100%;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  position: relative;
+}
+
+/* Botons d'esquerra i dreta */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5); /* Fons semitransparent per als botons */
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+/* Efecte de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Texto dentro del slider (títol sobre les fotos) */
+.slider-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 20; /* Asegura que el texto esté por encima de las imágenes y botones */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Contenido principal */
+main {
+  margin-top: 220px;
+  padding-top: 250px; /* Espacio debajo del header */
+  padding-bottom: 50px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* Sección de presentación */
+.text_presentacio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text_presentacio h2,
+.text_presentacio h3,
+.text_presentacio p {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.text_presentacio h2 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .text_presentacio h3 {
-  margin-top: 30px;
   font-size: 1.2rem;
-  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .text_presentacio p {
-  line-height: 1.6;
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
 .fotos_presentacio {
   display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
 }
 
 .fotos_presentacio-img {
-  width: 48%;
-  border-radius: 8px;
-}
-
-.fotos_presentacio-img.left {
-  float: left;
-  margin-right: 20px;
-}
-
-.fotos_presentacio-img.right {
-  float: right;
-  margin-left: 20px;
-}
-
-/* Responsivitat menú */
-@media (max-width: 768px) {
-  #barra_dalt ul {
-    display: block;  
-    text-align: center;
-  }
-
-  #barra_dalt ul li {
-    margin: 10px 0;  
-  }
-
-  #barra_dalt ul li a {
-    font-size: 1.2rem; 
-  }
-  
-  #barra_dalt .logo_titol {
-    justify-content: center; 
-  }
-
-  #barra_dalt #nav-title {
-    font-size: 1.3rem; 
-  }
-}
-
-@media (max-width: 1024px) and (min-width: 769px) {
-  #barra_dalt ul {
-    display: flex; 
-    justify-content: center;
-  }
-
-  #barra_dalt ul li {
-    margin-left: 15px;  
-  }
-
-  #barra_dalt ul li a {
-    font-size: 1.1rem; 
-  }
-}
-
-@media (min-width: 1025px) {
-  #barra_dalt ul {
-    display: flex;  
-    justify-content: flex-end;
-  }
-
-  #barra_dalt ul li {
-    margin-left: 20px;  
-  }
-
-  #barra_dalt ul li a {
-    font-size: 1rem;
-  }
-}
-
-/* Estils index.html */
-.portada {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 150px;
-  width: 1200px; 
-}
-
-.foto_portada-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-}
-
-.titol_portada {
-  position: absolute;
-  bottom: -180px; 
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); 
-  padding: 10px;
-}
-
-section h2 {
-  margin-top: 50px;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-section p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-top: 20px;
-}
-
-/* Elements responsius */
-@media (max-width: 768px) {
-  .text_presentacio {
-    width: 90%; 
-  }
-
-  .fotos_presentacio {
-    flex-direction: column;
-  }
-
-  .fotos_presentacio-img {
-    width: 100%;
-    margin: 10px 0; 
-  }
-
-  .portada {
-    width: 480px;
-    height: auto;
-  }
-
-  .foto_portada-img {
-    width: 480px;
-    height: auto;
-    margin-top: 135px;
-  }
-
-  .titol_portada {
-    font-size: 2rem;
-    padding: 30px;
-    position: relative;
-    top: 0px;
-  }
-
-  #barra_dalt ul {
-    display: block;
-    text-align: center;
-  }
-
-  #barra_dalt ul li {
-    margin: 15px 0;
-  }
-}
-
-/* Botons carrers */
-.botons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.botons .boto {
-  position: relative;
+  max-width: 48%;
   width: 250px;
-  margin: 15px;
+  height: auto;
+  clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+  transition: transform 0.3s ease;
+}
+
+.fotos_presentacio-img:hover {
+  transform: scale(1.1);
+}
+
+.text_carrers { 
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+padding: 30px;
+max-width: 800px;
+margin: 0 auto;
+}
+
+.text_carrers h2 {
+  font-size: 2.5rem;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
   text-align: center;
-}
-
-.botons .boto img {
+  z-index: 10;
   width: 100%;
-  height: 250px;
-  display: block;
+  margin-top: 203px;
+  position: relative;
 }
 
-.botons .boto .faldon {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-/* Mapa secció carrers */
-#mapa {
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-/* Responsivitat botons */
-@media screen and (max-width: 768px) {
-  .botons .boto {
-    width: 100%; 
-    margin-bottom: 15px;
-  }
-
-  .botons .boto .faldon {
-    font-size: 1rem; 
-  }
-
-  #mapa {
-    width: 100%; 
-  }
-
-  section p {
-    font-size: 1rem;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
-/* Mapa */
-.mapa {
+.footer-menu ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
 }
 
-.mapa-img {
-  width: 100%;
-  max-width: 800px; 
-  height: auto;
+.footer-menu li {
+  display: inline;
 }
 
-/* Responsiu mòbil */
-@media screen and (max-width: 768px) {
-  .buttons-container {
+.footer-menu a {
+  text-decoration: none;
+  color: #000;
+  background-color: #f4f0db;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-menu a img {
+  width: 16px;
+  height: 16px;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+/* Adaptación para móviles (pantallas más pequeñas) */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    padding: 15px;
+    height: auto;
+  }
+
+  .header-content {
+    justify-content: center;  /* Alinea el contenido al principio (izquierda) */
+    gap: 10px;  /* Reduce el espacio entre el logo y el texto en móviles */
+    padding-left: 0px;  /* Añade algo de espacio a la izquierda */
+  }
+
+  .logo {
+    max-width: 120px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  /* Ajustes del slider en móviles */
+  .slider {
+    height: 61vh; /* Reducción de la altura del slider */
+    margin-top: 10px; /* Ajuste para el espacio debajo del header */
+  }
+
+  .swiper-slide {
+    clip-path: polygon(5% 0%, 95% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%); /* Ajuste en clip-path para móviles */
+  }
+
+  .slider-text {
+    font-size: 1.5rem; /* Ajuste en el tamaño de la fuente */
+    z-index: 15;
+    margin-top: -200px; /* Ajuste para el espacio debajo del header */
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    z-index: 1; /* Botones visibles */
+    color: white;
+    margin-top: -200px; /* Ajuste para el espacio debajo del header */
+  }
+
+  /* Footer */
+  .footer-menu ul {
     flex-direction: column;
     align-items: center;
   }
 
-  .button {
-    width: 80%;
-    margin-bottom: 20px;
+  .footer-menu li {
+    margin-bottom: 10px;
   }
 
-  .mapa-img {
-    max-width: 100%;
+  .footer-menu a {
+    padding: 12px 20px;
   }
-}
 
-/* Enllaços */
-#enllaços_negres {
-  margin-left: 20px;  
-  margin-right: 20px; 
-}
+  /* Sección de presentación */
+  .text_presentacio {
+    padding: 15px;
+  }
 
-/* Text fitxa */
-.text_fitxa p {
-  line-height: 1.6;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  margin-up: -10px;
+  .fotos_presentacio {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .fotos_presentacio-img {
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+
+  footer {
+    margin-top: 58px;
+  }
 }

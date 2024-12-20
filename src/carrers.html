@@ -1,70 +1,101 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Els carrers del Rec Comtal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css"> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="El Rec Comtal, la infraestructura hidràulica més antiga de Barcelona">
+  <title>El Rec Comtal</title>
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
 
-  <!-- Menú superior persistent -->
-  <nav id="barra_dalt">
-    <div class="logo_titol">
-      <img src="/logos/logo.png" alt="Logotip. Tres línies corbes blanques que simulen la forma de l'aigua." id="logo_menu">
-      <h1 id="titol_barra"><a href="../index.html">El Rec Comtal</a></h1>
-      <ul>
-        <li><a href="/src/presentacio.html">Presentació</a></li>
-        <li><a href="/src/carrers.html">Carrers del Rec</a></li>
-        <li><a href="/src/enllacos.html">Enllaços</a></li>
-      </ul>
+  <header>
+    <div class="header-content">
+      <img src="../img/logo.png" alt="Logotip del Rec Comtal" class="logo">
+      <h1>El Rec Comtal</h1>
     </div>
-  </nav>
+  </header>
 
-  
-  <section class="text_presentacio">
+  <section class="text_carrers">
     <h2>Els carrers del Rec Comtal</h2>
     <p>
-            Avui dia, diversos carrers de Barcelona mantenen el nom d'aquesta important infraestructura. Són testimonis 
+      Avui dia, diversos carrers de Barcelona mantenen el nom d'aquesta important infraestructura. Són testimonis
       de la història de la ciutat i ens recorden el paper fonamental del Rec Comtal en la seva evolució.
     </p>
   </section>
 
-
   <section class="botons">
     <div class="boto">
-      <a href="/src/sequia_comtal.html">
-        <img src="/pic_gran/sequia_comtal_quadrat.jpg" alt="Carrer de la Sèquia Comtal">
-        <div class="faldon">Carrer de la Sèquia Comtal</div>
+      <a href="sequia_comtal.html" class="button">
+        <picture>
+          <!-- Versió webp per a totes les plataformes -->
+          <source srcset="../img/sequia_comtal_quadrat-small.jpg?as=webp" media="(max-width: 768px)">
+          <source srcset="../img/sequia_comtal_quadrat.jpg?as=webp">
+          <img src="../img/sequia_comtal_quadrat.jpg" alt="Carrer de la Sèquia Comtal" class="boto-img">
+        </picture>
+        <div class="boto-text">Carrer de la Sèquia Comtal</div>
       </a>
     </div>
     <div class="boto">
-      <img src="/pic_gran/rec_comtal_quadrat.jpg" alt="Carrer del Rec Comtal">
-      <div class="faldon">Carrer del Rec Comtal</div>
+      <a href="carrers.html" class="button">
+        <picture>
+          <source srcset="../img/rec_comtal_quadrat-small.jpg?as=webp" media="(max-width: 768px)">
+          <source srcset="../img/rec_comtal_quadrat.jpg?as=webp">
+          <img src="../img/rec_comtal_quadrat.jpg" alt="Carrer del Rec Comtal" class="boto-img">
+        </picture>
+        <div class="boto-text">Carrer del Rec Comtal</div>
+      </a>
     </div>
     <div class="boto">
-      <img src="/pic_gran/rec_quadrat.jpg" alt="Carrer del Rec">
-      <div class="faldon">Carrer del Rec</div>
+      <a href="carrers.html" class="button">
+        <picture>
+          <source srcset="../img/rec_quadrat-small.jpg?as=webp" media="(max-width: 768px)">
+          <source srcset="../img/rec_quadrat.jpg?as=webp">
+          <img src="../img/rec_quadrat.jpg" alt="Carrer del Rec" class="boto-img">
+        </picture>
+        <div class="boto-text">Carrer del Rec</div>
+      </a>
     </div>
     <div class="boto">
-      <img src="/pic_gran/sequia_quadrat.jpg" alt="Carrer de la Sèquia">
-      <div class="faldon">Carrer de la Sèquia</div>
+      <a href="carrers.html" class="button">
+        <picture>
+          <source srcset="../img/sequia_quadrat-small.jpg?as=webp" media="(max-width: 768px)">
+          <source srcset="../img/sequia_quadrat.jpg?as=webp">
+          <img src="../img/sequia_quadrat.jpg" alt="Carrer de la Sèquia" class="boto-img">
+        </picture>
+        <div class="boto-text">Carrer de la Sèquia</div>
+      </a>
     </div>
     <div class="boto">
-      <img src="/pic_gran/basses_sant_pere_quadrat.jpg" alt="Carrer Basses de Sant Pere">
-      <div class="faldon">Carrer de les Basses de Sant Pere</div>
+      <a href="carrers.html" class="button">
+        <picture>
+          <source srcset="../img/basses_sant_pere_quadrat-small.jpg?as=webp" media="(max-width: 768px)">
+          <source srcset="../img/basses_sant_pere_quadrat.jpg?as=webp">
+          <img src="../img/basses_sant_pere_quadrat.jpg" alt="Carrer Basses de Sant Pere" class="boto-img">
+        </picture>
+        <div class="boto-text">Carrer de les Basses de Sant Pere</div>
+      </a>
     </div>
   </section>
 
-  <section class="text_presentacio">
-    <h2>Mapa del Rec Comtal</h2>
-    
-  </section>
-
-  <section class="mapa">
-        <img src="/pic_gran/mapa2.jpg" alt="Mapa del Rec Comtal" class="mapa-img">
-  </section>
+  <!-- Footer -->
+  <footer>
+    <div id="menu_navegacio_footer" class="footer-menu">
+      <ul>
+        <li><a href="../index.html"><img src="../img/ico1.png" alt="Logo home"> Inici</a></li>
+        <li><a href="presentacio.html"><img src="../img/ico2.png" alt="Logo informació"> Presentació</a></li>
+        <li><a href="enllacos.html"><img src="../img/ico4.png" alt="Logo enllaços"> Enllaços i fonts d'informació</a></li>
+      </ul>
+    </div>
+    <div>
+      <p>&copy; 2024. Tots els drets reservats.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
