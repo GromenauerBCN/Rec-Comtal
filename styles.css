@@ -304,6 +304,7 @@ footer p {
 }
 
 /* Responsivitat */
+
 @media (max-width: 768px) {
 
   header {
@@ -313,21 +314,21 @@ footer p {
 
   .header-content {
     justify-content: center;  
-    gap: 10px;
+    gap: 20px;
     padding-left: 0px;
   }
 
   .logo {
-    max-width: 120px;
+    max-width: 60px;
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 
     .slider {
-    height: 61vh;
-    margin-top: 10px;
+    height: 70vh;
+    margin-top: 130px;
   }
 
   .swiper-slide {
@@ -337,13 +338,13 @@ footer p {
   .slider-text {
     font-size: 1.5rem;
     z-index: 15;
-    margin-top: -200px;
+    margin-top: 0px;
   }
 
   .swiper-button-next, .swiper-button-prev {
     z-index: 1;
     color: white;
-    margin-top: -200px;
+    margin-top: 0px;
   }
 
   
