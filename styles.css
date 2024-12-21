@@ -24,7 +24,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* Asegura que el header esté encima de otros elementos */
+  z-index: 1000;
   height: 90px;
   width: 100%;
 }
@@ -111,10 +111,8 @@ h1 {
 .slider {
   position: relative;
   z-index: 1;
-  top: 20px;
   margin-top: 90px;
-  margin-bottom: 0px;
-  height: calc(100vh - 241px); 
+  height: calc(100vh - 241px);
   width: 100%;
 }
 
@@ -145,7 +143,7 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5); /* Fons semitransparent per als botons */
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 10px;
   border-radius: 50%;
@@ -161,15 +159,6 @@ h1 {
   left: 10px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .slider-text {
   position: absolute;
   top: 50%;
@@ -178,14 +167,35 @@ h1 {
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
-  z-index: 20; 
+  z-index: 20;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .slider {
+    height: 50vh;
+    margin-top: 0;
+  }
+
+  .swiper-slide {
+    clip-path: polygon(5% 0%, 95% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+  }
+
+  .slider-text {
+    font-size: 1.5rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
 main {
   margin-top: 220px;
-  padding-top: 250px; 
+  padding-top: 250px;
   padding-bottom: 50px;
   flex-grow: 1;
   width: 100%;
@@ -198,14 +208,6 @@ main {
   padding: 30px;
   max-width: 800px;
   margin: auto;
-}
-
-.text_presentacio h2,
-.text_presentacio h3,
-.text_presentacio p {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  line-height: 1.6;
 }
 
 .text_presentacio h2 {
@@ -244,21 +246,6 @@ main {
   transform: scale(1.1);
 }
 
-.text_carrers { 
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-padding: 30px;
-max-width: 800px;
-margin: 0 auto;
-}
-
-.text_carrers h2 {
-  font-size: 2.5rem;
-  margin-top: 80px;
-  margin-bottom: 20px;
-}
-
 footer {
   background-color: #000;
   color: #fff;
@@ -266,8 +253,6 @@ footer {
   text-align: center;
   z-index: 10;
   width: 100%;
-  margin-top: 20 ;
-  position: relative;
 }
 
 .footer-menu ul {
@@ -303,56 +288,10 @@ footer p {
   margin: 10px 0;
 }
 
-/* Responsivitat */
-
 @media (max-width: 768px) {
-
-  header {
-    padding: 0px;
-    height: auto;
-  
-  }
-
-  .header-content {
-    justify-content: center;  
-    gap: 20px;
-  }
-
-  .logo {
-    max-width: 30px;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
-
-    .slider {
-    height: 50vh;
-    margin-top: 0px;
-    position:;
-  }
-
-  .swiper-slide {
-    clip-path: polygon(5% 0%, 95% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%); /* Ajuste en clip-path para móviles */
-  }
-
-  .slider-text {
-    font-size: 1.5rem;
-    z-index: 15;
-
-  }
-
-  .swiper-button-next, .swiper-button-prev {
-    z-index: 1;
-    color: white;
-
-  }
-
-  
   .footer-menu ul {
     flex-direction: column;
     align-items: center;
-    position: relative;
   }
 
   .footer-menu li {
@@ -377,9 +316,5 @@ footer p {
     width: 100%;
     opacity: 0;
     animation: fadeIn 1s forwards;
-  }
-
-  footer {
-    margin-top: 58px;
   }
 }
