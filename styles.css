@@ -308,18 +308,18 @@ footer p {
 @media (max-width: 768px) {
 
   header {
-    padding: 15px;
+    padding: 0px;
     height: auto;
+  
   }
 
   .header-content {
     justify-content: center;  
     gap: 20px;
-    padding-left: 0px;
   }
 
   .logo {
-    max-width: 60px;
+    max-width: 30px;
   }
 
   h1 {
@@ -327,8 +327,9 @@ footer p {
   }
 
     .slider {
-    height: 70vh;
-    margin-top: 130px;
+    height: 50vh;
+    margin-top: 0px;
+    position:;
   }
 
   .swiper-slide {
@@ -338,19 +339,20 @@ footer p {
   .slider-text {
     font-size: 1.5rem;
     z-index: 15;
-    margin-top: 0px;
+
   }
 
   .swiper-button-next, .swiper-button-prev {
     z-index: 1;
     color: white;
-    margin-top: 0px;
+
   }
 
   
   .footer-menu ul {
     flex-direction: column;
     align-items: center;
+    position: absolute;
   }
 
   .footer-menu li {
