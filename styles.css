@@ -24,7 +24,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1000; /* Asegura que el header esté encima de otros elementos */
   height: 90px;
   width: 100%;
 }
@@ -111,8 +111,10 @@ h1 {
 .slider {
   position: relative;
   z-index: 1;
+  top: 20px;
   margin-top: 90px;
-  height: calc(100vh - 241px);
+  margin-bottom: 0px;
+  height: calc(100vh - 241px); 
   width: 100%;
 }
 
@@ -143,7 +145,7 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Fons semitransparent per als botons */
   color: #fff;
   padding: 10px;
   border-radius: 50%;
@@ -159,6 +161,15 @@ h1 {
   left: 10px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .slider-text {
   position: absolute;
   top: 50%;
@@ -167,35 +178,14 @@ h1 {
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
-  z-index: 20;
+  z-index: 20; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .slider {
-    height: 50vh;
-    margin-top: 0;
-  }
-
-  .swiper-slide {
-    clip-path: polygon(5% 0%, 95% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
-  }
-
-  .slider-text {
-    font-size: 1.5rem;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-}
-
 main {
   margin-top: 220px;
-  padding-top: 250px;
+  padding-top: 250px; 
   padding-bottom: 50px;
   flex-grow: 1;
   width: 100%;
@@ -208,6 +198,14 @@ main {
   padding: 30px;
   max-width: 800px;
   margin: auto;
+}
+
+.text_presentacio h2,
+.text_presentacio h3,
+.text_presentacio p {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
 .text_presentacio h2 {
@@ -246,6 +244,21 @@ main {
   transform: scale(1.1);
 }
 
+.text_carrers { 
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+padding: 30px;
+max-width: 800px;
+margin: 0 auto;
+}
+
+.text_carrers h2 {
+  font-size: 2.5rem;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
 footer {
   background-color: #000;
   color: #fff;
@@ -253,6 +266,8 @@ footer {
   text-align: center;
   z-index: 10;
   width: 100%;
+  margin-top: 20 ;
+  position: relative;
 }
 
 .footer-menu ul {
@@ -288,18 +303,76 @@ footer p {
   margin: 10px 0;
 }
 
+
 @media (max-width: 768px) {
+
+  header {
+    padding: 5px;
+    height: 80;
+  }
+
+  .header-content {
+    justify-content: center;  
+    gap: 5px;
+    padding-left: 0px;
+  }
+
+  .logo {
+    max-width: 50px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+    .slider {
+    height: 610px;
+    margin-top: 100px;
+  }
+
+  .swiper-slide {
+    clip-path: polygon(5% 0%, 95% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%); /* Ajuste en clip-path para móviles */
+  }
+
+  .slider-text {
+    font-size: 1.5rem;
+    z-index: 15;
+    margin-top: 0px;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    z-index: 1;
+    color: white;
+    margin-top: 0px;
+  }
+
+  
   .footer-menu ul {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0px;
   }
 
   .footer-menu li {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 
   .footer-menu a {
-    padding: 12px 20px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .footer-menu a img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-menu a span{
+    display: none;
   }
 
   .text_presentacio {
@@ -316,5 +389,9 @@ footer p {
     width: 100%;
     opacity: 0;
     animation: fadeIn 1s forwards;
+  }
+
+  footer {
+    margin-top: 58px;
   }
 }
