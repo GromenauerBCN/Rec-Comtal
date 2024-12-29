@@ -51,6 +51,7 @@ h1 {
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  
 }
 
 .boto {
@@ -58,7 +59,8 @@ h1 {
   width: 250px;
   height: 250px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  
+  animation: fadeIn 2s ease-in-out;
 }
 
 .boto a {
@@ -93,20 +95,6 @@ h1 {
   z-index: 1;
 }
 
-@media (max-width: 768px) {
-  .boto {
-    width: 100px;
-    height: 100px;
-  }
-
-  .boto img {
-    clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
-  }
-
-  .boto-text {
-    font-size: 12px;
-  }
-}
 
 .slider {
   position: relative;
@@ -230,6 +218,7 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .fotos_presentacio-img {
@@ -238,6 +227,7 @@ main {
   height: auto;
   clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
   transition: transform 0.3s ease;
+ 
 }
 
 .fotos_presentacio-img:hover {
@@ -346,6 +336,18 @@ footer p {
     margin-top: 0px;
   }
 
+  .boto {
+    width: 100px;
+    height: 100px;
+  }
+
+  .boto img {
+    clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+  }
+
+  .boto-text {
+    font-size: 12px;
+  }
   
   .footer-menu ul {
     flex-direction: row;
