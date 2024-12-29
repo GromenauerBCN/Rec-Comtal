@@ -172,8 +172,8 @@ h1 {
 }
 
 main {
-  margin-top: 220px;
-  padding-top: 250px; 
+  margin-top: 40px;
+  padding-top: 10px; 
   padding-bottom: 50px;
   flex-grow: 1;
   width: 100%;
@@ -186,6 +186,7 @@ main {
   padding: 30px;
   max-width: 800px;
   margin: auto;
+  
 }
 
 .text_presentacio h2,
