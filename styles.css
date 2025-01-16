@@ -18,6 +18,7 @@
        url('/fonts/Roboto-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+}
 
 body {
   margin: 0;
