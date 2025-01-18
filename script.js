@@ -1,7 +1,4 @@
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css';
-
-const swiper = new Swiper('.swiper', {
+var swiper = new Swiper('.swiper-container', {
   loop: true,
   autoplay: {
     delay: 5000, 
