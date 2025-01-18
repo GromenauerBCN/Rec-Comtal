@@ -1,4 +1,4 @@
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('swiper-container', {
   loop: true,
   autoplay: {
     delay: 5000, 
@@ -9,6 +9,6 @@ var swiper = new Swiper('.swiper-container', {
   },
   pagination: {
     el: '.swiper-pagination',
-    clickable: false,
+    clickable: true,
   },
 });
